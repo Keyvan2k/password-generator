@@ -11,11 +11,9 @@
 
 using namespace std;
 
-const char charset[] = "0123456789!@#$%^&*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
-int stringlen = sizeof(charset);
 
 int main() {
-
+    const char charset[] = "0123456789!@#$%^&*abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
     int length;
 
     cout << "Insert lenght of password: ";
@@ -41,6 +39,7 @@ int main() {
     for (int i = 0; i < length; i++) {
         password[i] = charset[rand() % 70];
     }
+
     cout << "\nGenerated password: " << password << endl;
 
     system("pause");
