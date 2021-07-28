@@ -2,10 +2,10 @@
 #include <string>
 #include <cstdlib>
 #include <ctime>
-#ifdef WIN32
+#ifdef WIN32 // if the OS is windows then
 #include <windows.h>
 #endif
-#if defined(linux) || defined(unix)
+#if defined(linux) || defined(unix) // if the OS is linux or unix then 
 #include <unistd.h>
 #endif
 
@@ -26,11 +26,11 @@ int main() {
     cout << "\nGenerating password";
 
     for (int j = 0; j < 3; j++) {
-        #ifdef WIN32
+        #ifdef WIN32 // if the OS is windows then
             cout << ".";
             Sleep(1000);
         #endif  
-        #if defined(linux) || defined(unix)
+        #if defined(linux) || defined(unix)// if the OS is linux or unix then 
             cout << ".";
             sleep(1);
         #endif
